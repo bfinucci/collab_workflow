@@ -1,6 +1,19 @@
 # COLLAB_WORKFLOW
 
-How to collaborate effectively on a project
+How to collaborate effectively on a project to take over the world
+
+# Table of Contents
+  * [Overview](#overview)
+  * [Collaborators and contributors](#collaborators-and-contributors)
+  * [Basic steps](#basic-steps)
+  * [Synoptics of the workflow](#synoptics-of-the-workflow)
+  * [Five basic git commands](#five-basic-git-commands)
+  * [How to switch between different branches](#how-to-switch-between-different-branches)
+  * [Checking out a previous version](#checking-out-a-previous-version)
+  * [Frequently asked questions](#frequently-asked-questions)
+  * [Terminology](#terminology)
+
+
 
 ## Overview
 
@@ -63,23 +76,23 @@ There are two main roles to be assigned in the project:
 ## Synoptics of the workflow
 
 The process is shown below with time advancing from left to right. A branch is shown as a horizontal line. Branches are stacked vertically. Changes/commits/merges are shown as "O". The vertical dotted line shows where a pull-request was initiated. Special actions are denoted by A, B, C, D and E:
- * A: project master repo is forked
- * B: changes from project master are "pulled" to personal master and feature branch "new_population_assessment" is created
+ * A: project master repo is forked from remote, this porject master is also referred as 'origin'
+ * B: changes from project master are "pulled" to personal master and feature branch "new_population_assessment" is created 
  * C: changes from the project master are "pulled" into the "new_population_assessment" branch. If any, resolve conflicts arising from the "pull". 
  * D: pull-request is initiated
  * E: pull-request is accepted by collaborator, changes from branch "new_population_assessment" are merged into the project master. 
 
 ```sequence
                        v       v      v
-project master   -+----O---+---O------O--+--:--O--...
+project master   -+----O---+---O------O--+--:--O-->...
                   |        |             |  :  ^
                   |        v             |  :  |
 personal master   .---------+--...       |  :  |
                             |            |  :  |
                   A         |            |  :  |
                             |            v  :  |
-new_population_assessment   .-O--O---O-O-O-O-O-+
-                             
+new_population_assessment  .-O--O---O-O-O-O-O-+
+(feature master)
                             B            C  D  E         
 ```
 
@@ -135,6 +148,9 @@ git checkout master
 
  * Q: What if I need changes not yet accepted by a pull-request in order to work on a new feature? 
   * A: Branch off from the previous pull-request branch and make your changes theres. In the pull-request message, indicate that the current pull-request supercedes the previous pull-request. The collaborator then has the choice between aceepting the last pull-request and rejecting the previous one or accepting the previous one, or rejecting both.
+
+ * Q: What is your favourite fish?
+  * A: massive sharks.
 
 ## Terminology
 
